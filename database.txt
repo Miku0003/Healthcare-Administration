@@ -1,0 +1,20 @@
+create database d_f;
+use d_f;
+create table doctor(did int(11) primary key auto_increment, image varchar(255), name varchar(255), contact bigint(11), address varchar(255), specialization varchar(255), w_address varchar(255), email varchar(50), password varchar(50));
+/*Delete the Table (drop table doctor;)*/
+
+select * from doctor;
+
+create table package(p_id int(11) primary key auto_increment, did int(11), p_name varchar(255), p_amount int(11), p_test varchar(255));
+
+select * from package;
+
+create table patient(id int(11) primary key auto_increment, name varchar(255), contact bigint(11), address varchar(255), email varchar(50), password varchar(50));
+
+select * from patient;
+
+create table appointment(aid int(11) primary key auto_increment, pid int(11), p_id int(11), date date, status varchar(50))
+
+select * from appointment;
+
+delete from appointment where aid = 2;
